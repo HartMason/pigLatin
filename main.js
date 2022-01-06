@@ -10,12 +10,54 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+//chair
 
 const pigLatin = (word) => {
+  // Case of starting with consonante 
+  // remove all consonants before first vowel
+  // 
+  
+  // loop through our array
+  // at each index check if its vowel or consonate, what are vowels 'aeiou   
+  
+    // if consonate <--- SKIP
+    // if vowel && index > 0 take all consonates to up until the first vowel 
+    // then "concat" them to the end of the word
+    // then also 'concat' them to the end of array
+    // join your array back together
+  // break out of loop.
 
-  // Your code here
+  // Case of starting with vowel // again what is a vowel
+  // if index 0 = vowel 
+    // 'concat' ''yay'' to the end of word. 
 
-}
+  // return translated word
+
+
+  //helpful methods "includes" "indexOf" "slice"
+
+  const vowels = ['a', 'e', 'i', 'o', 'u']
+  word = word.toLowerCase().trim()
+  for (let i = 0; i < word.length; i++) {
+    // console.log(word)
+    // console.log(word[i])
+    // console.log(vowels[i])
+    if (word[0].includes(vowels[i])) {
+      return word + 'yay'
+    } else if  (word[1].includes(vowels[i])) {
+      let result = word.slice(1) + word.charAt(0) + 'ay'
+     
+      // console.log(word.slice(1))
+      // console.log(word.slice(1) + word.charAt(0) + 'ay')
+      console.log(result)
+      return result
+    }
+
+    }
+  }
+
+
+//
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
@@ -26,7 +68,7 @@ const getPrompt = () => {
     getPrompt();
   });
 }
-
+ 
 // Unit Tests
 // to use them run the command: npm test main.js
 // to close them ctrl + C
