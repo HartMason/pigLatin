@@ -13,6 +13,25 @@ const rl = readline.createInterface({
 //chair
 
 const pigLatin = (word) => {
+  word = word.toLowerCase().trim();
+  let vowels = ['a', 'e', 'i', 'o', 'u']
+  if (vowels.includes(word[0])) {
+    return word + "yay"
+  }
+  let firstVowelIndex = null
+  for (let i=0; i < word.length; i++) {
+    if (vowels.includes(word[i])) {
+     firstVowelIndex = i 
+     break;
+      // console.log(word[i])
+    }  
+  }
+  console.log(word.slice(0, firstVowelIndex))
+  let start = word.slice(0, firstVowelIndex)
+  let end = word.slice(firstVowelIndex) 
+  return end + start + 'ay'
+
+  // console.log(vowels.includes(word[0]))
   // Case of starting with consonante 
   // remove all consonants before first vowel
   // 
@@ -32,29 +51,29 @@ const pigLatin = (word) => {
     // 'concat' ''yay'' to the end of word. 
 
   // return translated word
-
+   
 
   //helpful methods "includes" "indexOf" "slice"
 
-  const vowels = ['a', 'e', 'i', 'o', 'u']
-  word = word.toLowerCase().trim()
-  for (let i = 0; i < word.length; i++) {
-    // console.log(word)
-    // console.log(word[i])
-    // console.log(vowels[i])
-    if (word[0].includes(vowels[i])) {
-      return word + 'yay'
-    } else if  (word[1].includes(vowels[i])) {
-      let result = word.slice(1) + word.charAt(0) + 'ay'
+  // const vowels = ['a', 'e', 'i', 'o', 'u']
+  // word = word.toLowerCase().trim()
+  // for (let i = 0; i < word.length; i++) {
+  //   // console.log(word)
+  //   // console.log(word[i])
+  //   // console.log(vowels[i])
+  //   if (word[0].includes(vowels[i])) {
+  //     return word + 'yay'
+  //   } else if  (word[1].includes(vowels[i])) {
+  //     let result = word.slice(1) + word.charAt(0) + 'ay'
      
-      // console.log(word.slice(1))
-      // console.log(word.slice(1) + word.charAt(0) + 'ay')
-      console.log(result)
-      return result
-    }
+  //     // console.log(word.slice(1))
+  //     // console.log(word.slice(1) + word.charAt(0) + 'ay')
+  //     console.log(result)
+  //     return result
+  //   }
 
-    }
-  }
+  //   }
+}
 
 
 //
