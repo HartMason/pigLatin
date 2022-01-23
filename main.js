@@ -31,48 +31,6 @@ const pigLatin = (word) => {
   let end = word.slice(firstVowelIndex) 
   return end + start + 'ay'
 
-  // console.log(vowels.includes(word[0]))
-  // Case of starting with consonante 
-  // remove all consonants before first vowel
-  // 
-  
-  // loop through our array
-  // at each index check if its vowel or consonate, what are vowels 'aeiou   
-  
-    // if consonate <--- SKIP
-    // if vowel && index > 0 take all consonates to up until the first vowel 
-    // then "concat" them to the end of the word
-    // then also 'concat' them to the end of array
-    // join your array back together
-  // break out of loop.
-
-  // Case of starting with vowel // again what is a vowel
-  // if index 0 = vowel 
-    // 'concat' ''yay'' to the end of word. 
-
-  // return translated word
-   
-
-  //helpful methods "includes" "indexOf" "slice"
-
-  // const vowels = ['a', 'e', 'i', 'o', 'u']
-  // word = word.toLowerCase().trim()
-  // for (let i = 0; i < word.length; i++) {
-  //   // console.log(word)
-  //   // console.log(word[i])
-  //   // console.log(vowels[i])
-  //   if (word[0].includes(vowels[i])) {
-  //     return word + 'yay'
-  //   } else if  (word[1].includes(vowels[i])) {
-  //     let result = word.slice(1) + word.charAt(0) + 'ay'
-     
-  //     // console.log(word.slice(1))
-  //     // console.log(word.slice(1) + word.charAt(0) + 'ay')
-  //     console.log(result)
-  //     return result
-  //   }
-
-  //   }
 }
 
 
@@ -87,12 +45,12 @@ const getPrompt = () => {
     getPrompt();
   });
 }
- 
+
 // Unit Tests
 // to use them run the command: npm test main.js
 // to close them ctrl + C
 if (typeof describe === 'function') {
-
+  
   describe('#pigLatin()', () => {
     it('should translate a simple word', () => {
       assert.equal(pigLatin('car'), 'arcay');
@@ -112,9 +70,9 @@ if (typeof describe === 'function') {
     });
   });
 } else {
-
+  
   getPrompt();
-
+  
 }
 
 
@@ -130,3 +88,46 @@ if (typeof describe === 'function') {
 // 1. if word begins with a vowel send to one function: adds "yay"
 // 2. if word begins with a consonant send to another function: splices off beginning, returns word with new ending.
 // 3. if multiple words, create array of words, loop over them, sending them to different functions and creating a new array with the new words.
+
+// console.log(vowels.includes(word[0]))
+// Case of starting with consonante 
+// remove all consonants before first vowel
+// 
+
+// loop through our array
+// at each index check if its vowel or consonate, what are vowels 'aeiou   
+
+  // if consonate <--- SKIP
+  // if vowel && index > 0 take all consonates to up until the first vowel 
+  // then "concat" them to the end of the word
+  // then also 'concat' them to the end of array
+  // join your array back together
+// break out of loop.
+
+// Case of starting with vowel // again what is a vowel
+// if index 0 = vowel 
+  // 'concat' ''yay'' to the end of word. 
+
+// return translated word
+ 
+
+//helpful methods "includes" "indexOf" "slice"
+
+// const vowels = ['a', 'e', 'i', 'o', 'u']
+// word = word.toLowerCase().trim()
+// for (let i = 0; i < word.length; i++) {
+//   // console.log(word)
+//   // console.log(word[i])
+//   // console.log(vowels[i])
+//   if (word[0].includes(vowels[i])) {
+//     return word + 'yay'
+//   } else if  (word[1].includes(vowels[i])) {
+//     let result = word.slice(1) + word.charAt(0) + 'ay'
+   
+//     // console.log(word.slice(1))
+//     // console.log(word.slice(1) + word.charAt(0) + 'ay')
+//     console.log(result)
+//     return result
+//   }
+
+//   }
